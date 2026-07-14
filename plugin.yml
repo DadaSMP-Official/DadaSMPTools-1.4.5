@@ -1,0 +1,110 @@
+name: DadaSMPTools
+version: 1.4.5
+main: it.dadasmp.tools.DadaSMPTools
+api-version: "1.20"
+author: DadaSMP
+depend: [Vault]
+softdepend: [BetterEconomy, LuckPerms]
+commands:
+  pay:
+    description: Paga un giocatore
+    usage: /pay <giocatore> <importo>
+    permission: dadasmptools.pay
+  tpa:
+    description: Richiede un teletrasporto o gestisce il TPA automatico
+    usage: /tpa <giocatore|auto>
+    permission: dadasmptools.tpa
+  tpaccept:
+    description: Accetta una richiesta TPA
+    aliases: [tpyes]
+    permission: dadasmptools.tpa
+  tpdeny:
+    description: Rifiuta una richiesta TPA
+    aliases: [tpno]
+    permission: dadasmptools.tpa
+  claim:
+    description: Protegge il chunk corrente
+  unclaim:
+    description: Rimuove il claim corrente
+  trust:
+    description: Autorizza un giocatore nel claim
+  untrust:
+    description: Rimuove un giocatore dal claim
+  claiminfo:
+    description: Mostra le informazioni del claim
+  dbackup:
+    description: Crea un backup completo
+  dpregen:
+    description: Pregenera i chunk
+  dlag:
+    description: Mostra diagnostica TPS e memoria
+  dlookup:
+    description: Cerca modifiche ai blocchi vicine
+  dinspect:
+    description: Attiva ispezione blocchi stile CoreProtect
+    aliases: [dinspectore, inspect]
+  drollback:
+    description: Ripristina modifiche ai blocchi
+  dflags:
+    description: Mostra i flag anti-cheat
+  ss:
+    description: Avvia e gestisce un controllo staff
+    usage: /ss <player|panel|back|pass|cancel|ban>
+  serverping:
+    description: Mostra ping e prestazioni del server
+    usage: /serverping [player]
+  bug:
+    description: Segnala e gestisce i bug del server
+    usage: /bug report <descrizione>
+    aliases: [bag]
+  dtools:
+    description: Mostra i comandi DadaSMPTools
+  withelist:
+    description: Gestisce la whitelist di manutenzione DadaSMP
+    usage: /withelist <true|false|add|remove|list|status> [giocatore|motivo]
+    aliases: [dwhitelist, manutenzione]
+permissions:
+  dadasmptools.pay:
+    default: true
+  dadasmptools.tpa:
+    default: true
+  dadasmptools.tpa.receive:
+    default: true
+  dadasmptools.claim:
+    default: true
+  dadasmptools.claim.limit.4:
+    default: true
+  dadasmptools.claim.unlimited:
+    default: op
+  dadasmptools.claim.bypass:
+    default: op
+  dadasmptools.claim.admin:
+    default: op
+  dadasmptools.anticheat.bypass:
+    default: op
+  dadasmptools.anticheat.alerts:
+    default: op
+  dadasmptools.anticheat.admin:
+    default: op
+  dadasmptools.backup:
+    default: op
+  dadasmptools.pregen:
+    default: op
+  dadasmptools.lag:
+    default: op
+  dadasmptools.audit.lookup:
+    default: op
+  dadasmptools.audit.rollback:
+    default: op
+  dadasmptools.staff:
+    default: op
+  dadasmptools.ss:
+    default: op
+  dadasmptools.serverping:
+    default: op
+  dadasmptools.bug.report:
+    default: true
+  dadasmptools.bug.staff:
+    default: op
+  dadasmptools.whitelist:
+    default: op
