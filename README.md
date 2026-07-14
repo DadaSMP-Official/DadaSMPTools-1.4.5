@@ -1,5 +1,8 @@
 ﻿# DadaSMPTools 1.4.5
 
+<p align="center"><img src="assets/dadasmp-logo.png" alt="DadaSMP" width="180"></p>
+
+
 > Custom Minecraft plugin with dedicated commands and server-side features.
 
 ![Minecraft](https://img.shields.io/badge/Minecraft-1.20%2B-green?style=for-the-badge)
